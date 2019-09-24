@@ -1,0 +1,396 @@
+/**common styles**/
+body {
+  margin: 0;
+}
+h1, h2, h3 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    opacity: 0.7;
+  }
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/*fonts */
+@font-face {
+  font-family: "ArialRegular";
+  src: url("../fonts/ArialRegular/ArialRegular.eot");
+  src: url("../fonts/ArialRegular/ArialRegular.woff") format("woff");
+  src: url("../fonts/ArialRegular/ArialRegular.ttf") format("opentype");
+}
+.page-container {
+  position: relative;
+  height: 100%;
+  padding-top: 170px;
+  padding-bottom: 259px;
+  font-family: "ArialRegular";
+}
+a:hover {
+  text-decoration: none;
+}
+/**** header ****/
+.page-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  background: #fff;
+
+  &__wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .container {
+    padding-top: 24px;
+    padding-bottom: 22px;
+  }
+  &__block {
+    padding: 8px 9px;
+    height: 54px;
+    margin-bottom: 10px;
+    background: violet;
+  }
+  &__mail:hover {
+    text-decoration: underline;
+  }
+}
+
+.block3 {
+  display: flex;
+  margin-bottom: 0;
+  justify-content: space-between;
+}
+.number {
+  color: #fff;
+}
+
+.page-header__user-block a {
+  display: block;
+  text-align: right;
+  color: #fff;
+  font-size: 14px;
+  line-height: 22px;
+}
+.page-header__mail {
+  text-decoration: underline;
+}
+.page-footer {
+
+  position: absolute;
+  left: 0;
+  bottom: 35px;
+  width: 100%;
+  height: 220px;
+  background: #fff;
+}
+
+/**** main-content ****/
+.main-content__block {
+  color: #fff;
+  background: yellow;
+}
+.main-content .container {
+  display: flex;
+  position: relative;
+  padding-top: 19px;
+  overflow: hidden;
+  padding-bottom: 35px;
+  margin-bottom: 33px;
+}
+.main-content  .container:before,
+.main-content  .container:after {
+  position: absolute;
+  content: "";
+  left: 15px;
+  width: calc(100% - 30px);
+  height: 1px;
+  background: #696969;
+}
+.main-content  .container:before {
+  top: 0;
+}
+.main-content  .container:after {
+  bottom: 0;
+}
+.main-content__wrapper {
+  position: relative;
+  flex-grow: 1;
+}
+.main-content__title {
+  padding-right: 10px;
+  font-size: 14px;
+  line-height: 22px;
+}
+.block5 {
+  color: #777777;
+  padding: 22px 21px;
+  margin-bottom: 20px;
+  background: greenyellow;
+  font-size: 14px;
+  line-height: 22px;
+
+}
+
+/**** sidebar ****/
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  left: -184px;
+  width: 184px;
+  height: calc(100% - 54px);
+  margin-right: 20px;
+  transition: 2s;
+  z-index: 3;
+  background: #fff;
+
+  &__title {
+    color: #fff;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+  &__list li {
+    margin: 0;
+  }
+  &__list li:hover {
+    opacity: 0.7;
+  }
+  &__list a {
+    color: #fff;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.showSidebar {
+  left: 15px;
+  box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.block4 {
+  padding: 22px 9px;
+  background: blueviolet;
+}
+.block7 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 184px;
+  height: 134px;
+  padding: 10px;
+  background: blueviolet;
+}
+
+
+/**** cards ****/
+.cards__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: block;
+    width: 49%;
+    height: 153px;
+    padding: 16px;
+    margin-bottom: 10px;
+    background: lightskyblue;
+    box-sizing: border-box;
+    transition: 3s;
+    cursor: pointer;
+  }
+  li:hover {
+    background: cornflowerblue;
+    box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.5);
+  }
+  li:first-child,
+  li:nth-child(6n) {
+    margin-left: 0;
+  }
+  li:nth-child(5n){
+    margin-right: 0;
+  }
+   a {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+  }
+}
+
+button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0px 0px 10px 0 rgba(0,0,0,0.5);
+  transition: 3s;
+  cursor: pointer;
+  outline: none;
+}
+button:hover {
+  transform: scale(1.2);
+  outline:none;
+}
+/*text-blocks*/
+.text-blocks {
+  display: flex;
+  flex-direction: column;
+  color: #777777;
+  font-size: 14px;
+  line-height: 22px;
+}
+.block8, .block9 {
+  padding: 22px 18px;
+  background: greenyellow;
+  box-sizing: border-box;
+}
+.block8 {
+  margin-bottom: 10px;
+}
+
+/**** Footer ****/
+.page-footer a {
+  color: #fff;
+  font-size: 14px;
+  line-height: 22px;
+
+}
+.block10, .block11, .block12, .block13{
+  padding: 18px;
+  display: flex;
+  background: darkblue;
+}
+.block10, .block11 {
+  height: 100%;
+}
+
+.block12, .block13 {
+  min-height: 90px;
+}
+.block10 .number {
+  margin-right: 15px;
+}
+.block10__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+}
+.block10__list li {
+  width: 49%;
+}
+.block11 {
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin-left: 30px;
+  }
+  &__list li {
+    position: relative;
+  }
+  &__list li:before {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: -18px;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+  }
+}
+
+.footer-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/******************Tablet*****************/
+
+@media (min-width: 768px) {
+  .cards__list li {
+    max-width: 32%;
+  }
+  /**** text-blocks ****/
+  .text-blocks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .block8, .block9 {
+    width: 49%;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .page-container {
+    padding-top: 161px;
+    padding-bottom: 289px;
+  }
+  .page-header__block {
+    height: 108px;
+    margin-bottom: 0;
+  }
+  .main-content__wrapper {
+    width: calc(100% - 214px);
+  }
+
+  /**** sidebar ****/
+  .sidebar {
+    position: relative;
+    left: 0;
+    height: auto;
+  }
+  /**** cards ****/
+  .cards {
+    &__list {
+      justify-content: flex-start;
+    }
+    &__list li {
+      max-width: 130.5px;
+      margin: 0 9px;
+      margin-bottom: 19px;
+    }
+  }
+
+  button {
+    display: none;
+  }
+
+  /**** Footer ****/
+  .page-footer {
+    height: 254px;
+  }
+
+
+}
+
+/******************Desktop*****************/
+
+@media (min-width: 1200px) {
+  /**** cards ****/
+  .cards__list li {
+    max-width: 166.5px;
+  }
+}
+
+

@@ -1,0 +1,1 @@
+$( document ).ready(function() {    $( "#barsBtn" ).click(function() {        $(".sidebar").toggleClass("showSidebar");    });});
